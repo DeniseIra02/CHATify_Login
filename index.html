@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=devise-width, initial-scal=1.0">
+    
+    <link rel="stylesheet" href="chatify_stylesheet.css">
+    <title> CHATify - Log In or Register </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div href="#Home"><a>CHATify</a></div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Aboutus">About Us</a></li>
+                    <li><a href="#Contacts">Contact</a></li>
+                    <li><button class="loginbttn" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Log In</button>
+                </ul>
+            </nav>
+        </div>
+        <div id="login-form" class="login-page">
+            <div class="square">
+                <div class="button">
+                    <div id="bttn"></div>
+                    <button type="button" class="bttn-toggle" onclick="login()">Log In</button>
+                    <button type="button" class="bttn-toggle" onclick="register()">Register</button>
+                </div>
+
+                <form id="login" class="input-login">
+                    <input type="text" class="input-box" placeholder="Username" required="required">
+                    <input type="password" class="input-box" placeholder="User Password" required="required">
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="sub-bttn">Log In</button>
+                </form>
+
+                <form id="register" class="input-register">
+                    <input type="text" class="input-box" placeholder="First Name" required="required">
+                    <input type="text" class="input-box" placeholder="Last Name" required="required">
+                    <input type="email" class="input-box" placeholder="Email" required="required">
+                    <input type="password" class="input-box" placeholder="User Password" required="required">
+                    <input type="password" class="input-box" placeholder="Confirm Password" required="required">
+                    <input type="checkbox" class="check-box"><span>I agree to Terms and Conditions</span>
+                    <button type="submit" class="sub-bttn">Register</button>
+                </form>
+            </div>   
+        </div>
+
+            <script>
+                var x = document.getElementById("login");
+                var y = document.getElementById("register");
+                var z = document.getElementById("bttn")
+                
+                function register(){
+                    x.style.left = "-400px";
+                    y.style.left = "50px";
+                    z.style.left = "110px";
+                }
+
+                function login(){
+                    x.style.left = "50px";
+                    y.style.left = "450px";
+                    z.style.left = "0";
+                }
+            </script>
+</body>
+</html>
+
